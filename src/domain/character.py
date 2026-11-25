@@ -1,4 +1,4 @@
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 
 from .voice import Voice
 
@@ -8,6 +8,6 @@ class Character:
     name: str
     description: str
     avatar: bytes
-    binded_models: list[str] = []
-    voices: list[Voice] = []
+    related_models: list[str] = field(default_factory=list)
+    voices: list[Voice] = field(default_factory=list)
     version: int = 1000
