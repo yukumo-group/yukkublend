@@ -2,7 +2,9 @@
 name = "yukkublend"
 version = "1.0.0"
 requires-python = ">=3.11"
-dependencies = []
+dependencies = [
+    "wasmtime>=51.0.0",
+]
 
 [dependency-groups]
 dev = [

@@ -26,10 +26,10 @@ def init():
 
 
 def register():
-    for cls in ordered_classes:
+    for cls in ordered_classes or []:
         bpy.utils.register_class(cls)
 
-    for module in modules:
+    for module in modules or []:
         if module.__name__ == __name__:
             continue
         if hasattr(module, "register"):
@@ -37,10 +37,10 @@ def register():
 
 
 def unregister():
-    for cls in reversed(ordered_classes):
+    for cls in reversed(ordered_classes or []):
         bpy.utils.unregister_class(cls)
 
-    for module in modules:
+    for module in modules or []:
         if module.__name__ == __name__:
             continue
         if hasattr(module, "unregister"):

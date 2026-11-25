@@ -1,0 +1,70 @@
+import bpy
+
+translations_dict = {
+    "en_US": {
+        ("*", "path_options"): "Paths",
+        ("*", "characters_path"): "Characters Path",
+        ("*", "characters_path_desc"): "Path to the character config directory",
+        ("*", "scripts_path"): "Scripts Path",
+        ("*", "scripts_path_desc"): "Path to the scripts directory",
+        ("*", "lincense_options"): "Licenses",
+        ("*", "license_options_desc"): "User Keys won't affect output quality but removes watermarking in voice waves.",
+        ("*", "aq1_usr_key"): "AquesTalk 1 User Key",
+        ("*", "aq1_usr_key_desc"): "Commercial user license key for AquesTalk 1",
+        ("*", "aq2_usr_key"): "AquesTalk 2 User Key",
+        ("*", "aq2_usr_key_desc"): "Commercial user license key for AquesTalk 2",
+        ("*", "aq10_usr_key"): "AquesTalk 10 User Key",
+        ("*", "aq10_usr_key_desc"): "Commercial user license key for AquesTalk 10",
+        ("*", "aqk2k_usr_key"): "AquesKanji2Koe User Key",
+        ("*", "aqk2k_usr_key_desc"): "Commercial user license key for AquesKanji2Koe",
+        ("*", "debug_options"): "Debug",
+        ("*", "wasmtime_debug"): "Wasmtime Debug Log",
+        ("*", "wasmtime_debug_desc"): "Enable Wasmtime Debug Log",
+    },
+    "zh_CN": {
+        ("*", "path_options"): "路径",
+        ("*", "characters_path"): "角色配置路径",
+        ("*", "characters_path_desc"): "角色配置目录路径",
+        ("*", "scripts_path"): "脚本路径",
+        ("*", "scripts_path_desc"): "脚本目录路径",
+        ("*", "lincense_options"): "许可证",
+        ("*", "license_options_desc"): "用户密钥不会影响输出质量，但会在语音波形中去除水印。",
+        ("*", "aq1_usr_key"): "AquesTalk 1 用户密钥",
+        ("*", "aq1_usr_key_desc"): "AquesTalk 1 商业用户许可证密钥",
+        ("*", "aq2_usr_key"): "AquesTalk 2 用户密钥",
+        ("*", "aq2_usr_key_desc"): "AquesTalk 2 商业用户许可证密钥",
+        ("*", "aq10_usr_key"): "AquesTalk 10 用户密钥",
+        ("*", "aq10_usr_key_desc"): "AquesTalk 10 商业用户许可证密钥",
+        ("*", "aqk2k_usr_key"): "AquesKanji2Koe 用户密钥",
+        ("*", "aqk2k_usr_key_desc"): "AquesKanji2Koe 商业用户许可证密钥",
+        ("*", "debug_options"): "调试",
+        ("*", "wasmtime_debug"): "Wasmtime 调试日志",
+        ("*", "wasmtime_debug_desc"): "启用 Wasmtime 调试日志",
+    },
+    "ja_JP": {
+        ("*", "path_options"): "パス",
+        ("*", "characters_path"): "キャラクター設定パス",
+        ("*", "characters_path_desc"): "キャラクター設定ディレクトリのパス",
+        ("*", "scripts_path"): "スクリプトパス",
+        ("*", "scripts_path_desc"): "スクリプトディレクトリのパス",
+        ("*", "lincense_options"): "ライセンス",
+        ("*", "license_options_desc"): "ユーザーキーは出力品質に影響しませんが、音声波形のウォーターマークを削除します。",
+        ("*", "aq1_usr_key"): "AquesTalk 1 ユーザーキー",
+        ("*", "aq1_usr_key_desc"): "AquesTalk 1 商用ユーザーライセンスキー",
+        ("*", "aq2_usr_key"): "AquesTalk 2 ユーザーキー",
+        ("*", "aq2_usr_key_desc"): "AquesTalk 2 商用ユーザーライセンスキー",
+        ("*", "aq10_usr_key"): "AquesTalk 10 ユーザーキー",
+        ("*", "aq10_usr_key_desc"): "AquesTalk 10 商用ユーザーライセンスキー",
+        ("*", "aqk2k_usr_key"): "AquesKanji2Koe ユーザーキー",
+        ("*", "aqk2k_usr_key_desc"): "AquesKanji2Koe 商用ユーザーライセンスキー",
+        ("*", "debug_options"): "デバッグ",
+        ("*", "wasmtime_debug"): "Wasmtime デバッグログ",
+        ("*", "wasmtime_debug_desc"): "Wasmtime デバッグログを有効にする",
+    },
+}
+
+def register():
+    bpy.app.translations.register(__package__, translations_dict)
+
+def unregister():
+    bpy.app.translations.unregister(__package__)
