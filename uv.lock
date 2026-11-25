@@ -1,0 +1,27 @@
+version = 1
+revision = 5
+requires-python = ">=3.11"
+
+[[package]]
+name = "fake-bpy-module-latest"
+version = "20261031"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/56/1c/6e400bf88f11b53e32207073269724e7c2671f8d3d832f10df091fffb6e6/fake_bpy_module_latest-20261031.tar.gz", hash = "sha256:65609900920ace03f7a54cbfdf1852b43dc6522cb994edffaca4d780dcb5c4ac", size = 973840, upload-time = "2026-10-31T11:24:55.397Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/ed/bd/3a1b73b4445baa05557dfe318a3257f0ed79d34007b954bcbf1cffce44f4/fake_bpy_module_latest-20261031-py3-none-any.whl", hash = "sha256:85142b1b6f6b58b2757b0606fb29f9657ec68b3e04afbdd6884abdd37167cc36", size = 1122162, upload-time = "2026-10-31T11:24:52.082Z" },
+]
+
+[[package]]
+name = "yukkublend"
+version = "1.0.0"
+source = { virtual = "." }
+
+[package.dev-dependencies]
+dev = [
+    { name = "fake-bpy-module-latest" },
+]
+
+[package.metadata]
+
+[package.metadata.requires-dev]
+dev = [{ name = "fake-bpy-module-latest", specifier = ">=20261031" }]

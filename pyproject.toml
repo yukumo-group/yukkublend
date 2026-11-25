@@ -1,0 +1,13 @@
+[project]
+name = "yukkublend"
+version = "1.0.0"
+requires-python = ">=3.11"
+dependencies = []
+
+[dependency-groups]
+dev = [
+  "fake-bpy-module-latest>=20261031",
+]
+
+[tool.uv]
+default-groups = ["dev"]
